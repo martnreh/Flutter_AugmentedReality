@@ -123,6 +123,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:ar_flutter_plugin/ar_flutter_plugin.dart';
+import 'package:model_viewer_plus/model_viewer_plus.dart';
 
 import 'examples/objectgesturesexample.dart';
 import 'examples/screenshotexample.dart';
@@ -176,6 +177,16 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(children: [
           Text('Running on: $_platformVersion\n'),
+          Container(
+            width: 500,
+            height: 500,
+            child: ModelViewer(
+              src: 'lib/Images/upperjaw.glb',
+              alt: 'A 3D model',
+              ar: true,
+              autoPlay: true,
+            ),
+          ),
           Expanded(
             child: ExampleList(),
           ),
