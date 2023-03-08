@@ -122,7 +122,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:ar_flutter_plugin/ar_flutter_plugin.dart';
+//import 'package:ar_flutter_plugin/ar_flutter_plugin.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 
 import 'examples/objectgesturesexample.dart';
@@ -152,20 +152,20 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      platformVersion = await ArFlutterPlugin.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
+    // try {
+    //   platformVersion = await ArFlutterPlugin.platformVersion;
+    // } on PlatformException {
+    //   platformVersion = 'Failed to get platform version.';
+    // }
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
     // setState to update our non-existent appearance.
     if (!mounted) return;
 
-    setState(() {
-      _platformVersion = platformVersion;
-    });
+    // setState(() {
+    //   _platformVersion = platformVersion;
+    // });
   }
 
   @override
@@ -202,35 +202,35 @@ class ExampleList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final examples = [
-      Example(
-          'Debug Options',
-          'Visualize feature points, planes and world coordinate system',
-          () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => DebugOptionsWidget()))),
-      Example(
-          'Local & Online Objects',
-          'Place 3D objects from Flutter assets and the web into the scene',
-          () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => LocalAndWebObjectsWidget()))),
-      Example(
-          'Anchors & Objects on Planes',
-          'Place 3D objects on detected planes using anchors',
-          () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => ObjectsOnPlanesWidget()))),
-      Example(
-          'Object Transformation Gestures',
-          'Rotate and Pan Objects',
-          () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ObjectGesturesWidget()))),
-      Example(
-          'Screenshots',
-          'Place 3D objects on planes and take screenshots',
-          () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ScreenshotWidget()))),
+      // Example(
+      //     'Debug Options',
+      //     'Visualize feature points, planes and world coordinate system',
+      //     () => Navigator.push(context,
+      //         MaterialPageRoute(builder: (context) => DebugOptionsWidget()))),
+      // Example(
+      //     'Local & Online Objects',
+      //     'Place 3D objects from Flutter assets and the web into the scene',
+      //     () => Navigator.push(
+      //         context,
+      //         MaterialPageRoute(
+      //             builder: (context) => LocalAndWebObjectsWidget()))),
+      // Example(
+      //     'Anchors & Objects on Planes',
+      //     'Place 3D objects on detected planes using anchors',
+      //     () => Navigator.push(
+      //         context,
+      //         MaterialPageRoute(
+      //             builder: (context) => ObjectsOnPlanesWidget()))),
+      // Example(
+      //     'Object Transformation Gestures',
+      //     'Rotate and Pan Objects',
+      //     () => Navigator.push(context,
+      //         MaterialPageRoute(builder: (context) => ObjectGesturesWidget()))),
+      // Example(
+      //     'Screenshots',
+      //     'Place 3D objects on planes and take screenshots',
+      //     () => Navigator.push(context,
+      //         MaterialPageRoute(builder: (context) => ScreenshotWidget()))),
       // Example(
       //     'Cloud Anchors',
       //     'Place and retrieve 3D objects using the Google Cloud Anchor API',
