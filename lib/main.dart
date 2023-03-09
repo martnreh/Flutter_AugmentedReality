@@ -181,7 +181,7 @@ class _MyAppState extends State<MyApp> {
             width: 500,
             height: 500,
             child: ModelViewer(
-              src: 'lib/Images/upperjaw.glb',
+              src: 'lib/Images/upperjaw.gltf',
               alt: 'A 3D model',
               ar: true,
               autoPlay: true,
