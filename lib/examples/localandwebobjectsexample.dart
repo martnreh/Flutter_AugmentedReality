@@ -155,7 +155,7 @@ class _LocalAndWebObjectsWidgetState extends State<LocalAndWebObjectsWidget> {
       print("created NODE");
       var newNode = ARNode(
           type: NodeType.localGLTF2,
-          uri: "lib/Images/Chicken_01/Chicken_01.gltf",
+          uri: "lib/Images/upperjaw.gltf",
           // uri: "lib/Images/Chicken_01/Chicken_01.gltf",
           scale: Vector3(0.2, 0.2, 0.2),
           position: Vector3(0.0, 0.0, 0.0),

@@ -108,10 +108,17 @@ class _ObjectGesturesWidgetState extends State<ObjectGesturesWidget> {
       if (didAddAnchor!) {
         this.anchors.add(newAnchor);
         // Add note to anchor
+        // var newNode = ARNode(
+        //     type: NodeType.webGLB,
+        //     uri:
+        //         "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF-Binary/Duck.glb",
+        //     scale: Vector3(0.2, 0.2, 0.2),
+        //     position: Vector3(0.0, 0.0, 0.0),
+        //     rotation: Vector4(1.0, 0.0, 0.0, 0.0));
         var newNode = ARNode(
-            type: NodeType.webGLB,
-            uri:
-                "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF-Binary/Duck.glb",
+            type: NodeType.localGLTF2,
+            uri: "lib/Images/upperjaw.gltf",
+            // uri: "lib/Images/Chicken_01/Chicken_01.gltf",
             scale: Vector3(0.2, 0.2, 0.2),
             position: Vector3(0.0, 0.0, 0.0),
             rotation: Vector4(1.0, 0.0, 0.0, 0.0));
